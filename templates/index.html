@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificar/Decodificar Áudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-indigo-700 via-violet-700 to-purple-800 text-slate-100">
+    <div class="max-w-4xl mx-auto p-6 space-y-8">
+        <h1 class="text-center text-3xl md:text-4xl font-extrabold">Codificar/Decodificar mensagens em Áudio</h1>
+
+        <!-- Texto para Áudio -->
+        <section class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
+            <h2 class="text-xl font-semibold mb-4">Codificar (Texto → Áudio)</h2>
+            <form action="/encrypt-audio" method="post" class="space-y-4">
+                <textarea name="text" rows="4" required
+                    class="w-full rounded-xl p-4 bg-black/30 text-slate-100 border border-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                    placeholder="Digite o texto aqui..."></textarea>
+                <button type="submit"
+                    class="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-400 hover:to-violet-500">
+                    Gerar Áudio
+                </button>
+            </form>
+        </section>
+
+        <!-- Áudio para Texto -->
+        <section class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
+            <h2 class="text-xl font-semibold mb-4">Decodificar (Áudio → Texto)</h2>
+            <form action="/decrypt-audio" enctype="multipart/form-data" method="post" class="space-y-4">
+                <input type="file" name="file" accept="audio/*" required class="block w-full text-sm text-slate-200 file:mr-4 file:py-2 file:px-4
+                      file:rounded-xl file:border-0 file:text-sm file:font-semibold
+                      file:bg-indigo-600 file:text-white hover:file:bg-indigo-500" />
+                <button type="submit"
+                    class="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-400 hover:to-violet-500">
+                    Decodificar Áudio
+                </button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

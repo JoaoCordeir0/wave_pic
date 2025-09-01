@@ -1,0 +1,12 @@
+fastapi==0.115.6
+uvicorn==0.34.0
+python-dotenv==1.0.1
+PyJWT==2.10.1
+boto3==1.35.94
+python-multipart==0.0.20
+requests==2.32.3
+numpy==2.3.2
+pillow==11.3.0
+pytesseract==0.3.13
+matplotlib==3.10.6
+pydub==0.25.1
